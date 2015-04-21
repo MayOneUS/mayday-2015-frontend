@@ -1,121 +1,179 @@
 /**
  * Mayday Page Styles
  */
-#plan-byline{//the plan-byline and progress-clearance are just to make sure the typography remains correct
-  margin-bottom: .8em;
-  font-size: 25px;
-  @include small-desktop {
-    margin-bottom: .7em;
-  }
-}
-#progress-clearance{
-  margin:0 0 1.8em 0;
-}
-.small-break p{
-  line-height: 1.7;
-  margin-top: 0em;
-  margin-bottom: 1.15em;
+// #plan-byline{
+//   margin-bottom: .8em;
+//   font-size: 25px;
+//   @include small-desktop {
+//     margin-bottom: .7em;
+//   }
+// }
+// #progress-clearance{
+//   margin:0 0 1.8em 0;
+// }
+// .small-break p{
+//   line-height: 1.7;
+//   margin-top: 0em;
+//   margin-bottom: 1.15em;
 
-  @include phone {
-    width: 100%
-  }
-}
+//   @include phone {
+//     width: 100%
+//   }
+// }
 
-.small-break h2, .small-break h3{
-  font-weight: 400;
-  margin: 1.2em 0 .65em 0;
-}
+// .small-break h2, .small-break h3{
+//   font-weight: 400;
+//   margin: 1.2em 0 .65em 0;
+// }
 
 /**
  * Mayday Panel Styles
  */
 
-.panel-mayday {
-  .mayday-profile {
-    padding-left: 0px;
-    margin-bottom: $bottom-spacing;
-    margin-left: 2px;
-    &:hover > .headshot > img {
-      border: 3px solid $navy-blue-light-color;
-      opacity: 1.0;
-    }
-    .headshot {
-      padding-right: 10px;;
-    }
-    .push-left{
-      margin-left: 0;
-      padding-left: 0;
-    }
-    .headshot > img {
-      border: 3px solid transparent;
-      opacity: 0.8;
-      width: 100%;
-    }
-    h4 {
-      margin: 0px;
-    }
-    h6 {
-      margin: 3px 0px;
-    }
+// .panel-mayday {
+//   .mayday-profile {
+//     padding-left: 0;
+//     margin-bottom: $bottom-spacing;
+//     margin-left: 2px;
+//     &:hover > .headshot > img {
+//       border: 3px solid $color-navy-blue-light;
+//       opacity: 1.0;
+//     }
+//     .headshot {
+//       padding-right: 10px;;
+//     }
+//     .push-left{
+//       margin-left: 0;
+//       padding-left: 0;
+//     }
+//     .headshot > img {
+//       border: 3px solid transparent;
+//       opacity: 0.8;
+//       width: 100%;
+//     }
+//     h4 {
+//       margin: 0;
+//     }
+//     h6 {
+//       margin: 3px 0;
+//     }
 
-    @include tablet {
-      h4 {
-        margin: inherit;
-        font-size: 1.6em;
-      }
-      h6 {
-        margin: 8px 0px;
-        font-size: 1.2em;
-      }
+//     @include tablet {
+//       h4 {
+//         margin: inherit;
+//         font-size: 1.6em;
+//       }
+//       h6 {
+//         margin: 8px 0;
+//         font-size: 1.2em;
+//       }
 
-    }
+//     }
 
-    @include phone {
-      h4 {
-        font-size: 1.2em;
-      }
-      h6 {
-        margin: 8px 0px;
-        font-size: 0.8em;
-      }
+//     @include phone {
+//       h4 {
+//         font-size: 1.2em;
+//       }
+//       h6 {
+//         margin: 8px 0;
+//         font-size: 0.8em;
+//       }
 
-    }
+//     }
+//   }
+// }
+
+
+.content-offset > [class*='col-'] {
+  margin-left: 12.555555557%;
+  @include phone {
+    margin-left: 0;
   }
 }
-
+.page-panel{
+  position: relative;
+  overflow: hidden;
+  padding-top:18px;
+  padding-bottom:22px;
+  font-weight: 400;
+  &.grey{
+    background-color: $color-grey-backgroud;
+  }
+  &.light{
+    background-color: #fff;
+  }
+  h2{
+    font-weight: 400;
+  }
+  p{
+    font-size: 17px;
+  }
+}
 /**
- * Mayday Button
+ * sticky form
  */
+.sticky-grid{
+  margin-top: 15px;
+}
+.sticky-grid .col-sm-1 { 
+  width: 20px;
+  padding-left:0;
+  padding-right:5px;
+  margin-top: 2px;
+}
+.sticky-grid .col-sm-2 { 
+  width: 125px;
+  padding-left:5px;
+  padding-right:0;
+  font-size: 12px;
+}
+// .sticky-tree{
+//   ul {
+//     list-style-image:url('/images/plan_side_star_off.svg');
+//   }
+// }
+.sticky-tree ul>li.list-unstyled>a.star{background: transparent url('/images/plan_side_star_off.svg') 2px 2px no-repeat; padding-left:20px; background-size:20px 20px;}
 
- a.btn-targets {
-  background-color: $grey-blue-color;
-  border-color: $grey-blue-color;
-  text-transform: uppercase;
-  color: white;
-  font-weight: 300;
-
-  @include large-desktop {
-    padding: 4px 8px;
-    font-size: 12px;
+.sticky-tree{
+  margin-left: -10px;
+  background:#fff; 
+  border-radius:5px;
+  padding: 0px 15px 30px 25px;
+  box-shadow: 1px 1px 2px #eee;
+  display: block;
+  position: fixed;
+  z-index: 10;
+  color: $color-text;
+  div{
+    width: 145px;
+    .sticky-star{
+      height: 15px;
+      width: 15px;
+      background:url('/images/plan_side_star_off.svg') center center no-repeat;
+    }
+    .sticky-star.active{
+      background:url('/images/plan_side_star_on.svg') center center no-repeat;
+    }
+    .sticky-text{
+      font-weight: 400;
+      line-height: 140%;
+      color: $color-text;
+    }
+    .sticky-text.active{
+      color: $color-brand;
+    }
   }
-
-  @include small-desktop {
-    padding: 4px 8px;
-    font-size: 12px;
+  @include small-desktop{
+    margin-left: -3%;
   }
-
-  @include tablet {
-    padding: 6px 16px;
-    font-size: 14px;
+  @include tablet{
+    margin-left: -7%;
   }
-
-  @include phone {
-    padding: 6px 16px;
-    font-size: 14px;
-  }
-
-  &:hover {
-    background-color: $grey-color-light;
-    border-color: $grey-color-light;
-  }
+}
+.state .col-md-2 {
+  width: 20%;
+  font-size: 16px;
+}
+.first-line{
+  font-weight: 400;
 }
