@@ -1,0 +1,98 @@
+  .jumbotron{
+    margin-top: -45px;
+    padding:0;
+    position:relative;
+    overflow: hidden;
+  }
+  .jumbotron>.container {
+    padding-top:30px;
+    padding-bottom:15px;
+    // background: url("/images/campaigns/20150429-hero-bg.jpg") 0 -0 no-repeat;
+    position:relative;
+    z-index: 5;
+    background-size: cover;
+    box-shadow: 0 0 50px rgba(22,33,63,0.7);
+    @include phone{
+      background-size: 50%;
+    }
+
+  }
+  
+  .jumbotron>.container>.row{
+    background: url("/images/campaigns/20150429-hero-white.png") 0 -0 no-repeat;
+    background-size: contain;
+  }
+
+  .jumbotron .bg-blurred{
+    filter: url(blur.svg#blur); -webkit-filter: blur(3px); filter: blur(3px);
+    background: url("/images/campaigns/20150429-hero-bg.jpg") 0 -3px no-repeat;
+    position:absolute;
+    width:105%;
+    height:105%;
+    left:-5px;
+    z-index: 1;
+    background-size: cover;
+  }
+
+.jumbo-text-wrap{
+  background:rgba(255,255,255,0.8);
+  padding: 0 20px 20px;
+}
+.jumbo-text-wrap h2{
+  border-top: 10px solid;
+  padding-top: 20px;
+  border-bottom: 10px solid;
+  padding-bottom: 20px;
+}
+
+.letter-wrap{
+  z-index:1000;
+  position: relative;
+}
+.letter {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 16px auto 0;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 90%;
+  font-family: 'Roboto Slab', serif;
+}
+.letter:before, .letter:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -3;
+}
+.letter:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.letter:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  z-index: -4;
+  transform: rotate(1.4deg);
+}
+
+.lt-ie8 .notepaper {
+  padding: 15px 25px;
+}
+
+.jumbo-text-wrap{
+  margin-bottom:100px;
+  @include phone{
+    margin-top:300px;
+    margin-bottom:10px;
+  }
+}
+.smaller-hash{
+  font-size:37px !important;
+}

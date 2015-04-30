@@ -49,6 +49,9 @@
     background: url("/images/campaigns/20150429-hero-white.png") 0 -0 no-repeat;
     background-size: contain;
   }
+  @include phone{
+    background-size: 100%;
+  }
 }
 .background-image-blurred{
   filter: url(blur.svg#blur); -webkit-filter: blur(3px); filter: blur(3px);
@@ -76,6 +79,15 @@
   .container{
     padding-top:0;
     padding-bottom:0;
+  }
+  .logo-img-center{
+    height: 100px;
+    @include phone{
+      height: 45px;
+      display:block;
+      margin:0 auto 4px;
+
+    }
   }
 
   .homepage-panel-body{
@@ -282,8 +294,7 @@
 
 
   .mini-panel{
-    padding-left:110px;
-    background:transparent url('') 5px 0 no-repeat;
+    
     letter-spacing: .2px;
     line-height: 22px;
     font-size: 16px;
@@ -296,19 +307,34 @@
       font-size: 18px;
       min-height:92px
     }
+    div{
+      padding-left:0 !important;
+      padding-right:5px !important;
+    }
   }
 
-  .mini-panel-text{
-    // padding-left:30px;// !important;
+  .home_icon_star{
     background-image: url('/images/home_icon_star.svg');
+    @include tablet{
+      background-position: center; 
+    }
+    @include phone{
+      background-position: center; 
+    }
+
   }
-  .mini-panel-call{
+  .home_icon_phone{
     background-image: url('/images/home_icon_map.svg');
   }
-  .mini-panel-state{
+  .home_icon_map{
     background-image: url('/images/home_icon_phone.svg');
   }
-
+  .home_icon_star,.home_icon_phone,.home_icon_map{
+    background-repeat:no-repeat;
+  }
+  .home_icon_phone,.home_icon_map{
+    background-position: center; 
+  }
 
 }
 
