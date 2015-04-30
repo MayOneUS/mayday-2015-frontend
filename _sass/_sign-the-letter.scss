@@ -3,6 +3,9 @@
     padding:0;
     position:relative;
     overflow: hidden;
+    @include phone{
+      margin-top: 0px;
+    }
   }
   .jumbotron>.container {
     padding-top:30px;

@@ -34,8 +34,11 @@
   width: 100%;
   position:relative;
   @include phone{
-    margin-top: -50px !important;
+    margin-top: 0px !important;
   }
+}
+.moblie-hack{
+  opacity: 0;
 }
 .banner-image {
   padding-top:20px;
