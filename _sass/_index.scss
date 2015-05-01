@@ -34,11 +34,15 @@
   width: 100%;
   position:relative;
   @include phone{
+    margin-top: 0px !important;
   }
   @include tablet-minus{
     background: url("/images/campaigns/20150429-hero-bg.jpg") 0 0 no-repeat;
     background-size: cover;
   }
+}
+.moblie-hack{
+  opacity: 0;
 }
 .banner-image {
   padding-top:20px;
@@ -53,10 +57,16 @@
     background-size: contain;
   }
 
+  @include phone{
+    background-size: 100%;
+  }
+
+
   @include tablet-minus{
     background-image:none;
     box-shadow: none;
     >.row{background-image:none;}
+
   }
 }
 .background-image-blurred{
@@ -88,6 +98,15 @@
   .container{
     padding-top:0;
     padding-bottom:0;
+  }
+  .logo-img-center{
+    height: 100px;
+    @include phone{
+      height: 45px;
+      display:block;
+      margin:0 auto 4px;
+
+    }
   }
 
   .homepage-panel-body{
@@ -294,8 +313,7 @@
 
 
   .mini-panel{
-    padding-left:110px;
-    background:transparent url('') 5px 0 no-repeat;
+    
     letter-spacing: .2px;
     line-height: 22px;
     font-size: 16px;
@@ -306,18 +324,35 @@
       font-size: 18px;
       min-height:92px
     }
+    div{
+      padding-left:0 !important;
+      padding-right:5px !important;
+    }
   }
 
-  .mini-panel-text{
+
+  .home_icon_star{
     background-image: url('/images/home_icon_star.svg');
+    @include tablet{
+      background-position: center; 
+    }
+    @include phone{
+      background-position: center; 
+    }
+
   }
-  .mini-panel-call{
+  .home_icon_phone{
     background-image: url('/images/home_icon_map.svg');
   }
-  .mini-panel-state{
+  .home_icon_map{
     background-image: url('/images/home_icon_phone.svg');
   }
-
+  .home_icon_star,.home_icon_phone,.home_icon_map{
+    background-repeat:no-repeat;
+  }
+  .home_icon_phone,.home_icon_map{
+    background-position: center; 
+  }
 
 }
 
@@ -353,18 +388,16 @@
   }
 }
 .call-box-thin{
-  padding-left:0 !important;
   font-size: 15px;
   font-weight: 300;
   @include small-desktop{
     font-size:17px;
   }
   @include phone{
-    font-size: 18px;
+    font-size: 25px;
   }
 }
 .call-box-thick{
-  padding-left:0 !important;
   font-size: 25px;
   font-weight: 400;
   line-height: 14px;
@@ -373,7 +406,8 @@
     font-size: 20px;
   }
   @include phone{
-    font-size: 20px;
+    padding-left:0 !important;
+    font-size: 25px;
   }
 }
 // only white link I know of consider moving
@@ -409,6 +443,7 @@
     .new-legislator{
       border-right: 1px solid #b7b7b7;
       @include tablet-minus{
+        padding-left: 0;
         border:none;
       }
       &:nth-child(3n) {
@@ -431,6 +466,7 @@
     @include phone{
       padding-top: 8px;
       font-size: 18px;
+      padding-left:10px !important;
     }
   }
   h4{
@@ -442,6 +478,7 @@
     }
     @include phone{
       font-size: 14px;
+      padding-left:10px !important;
     }
   }
 }
@@ -554,5 +591,27 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+#container2,.margin-fix{
+  padding-right:0;
+  padding-left:0;
+}
+
+//needed the media query without writing a more complicated one on sign the letter
+.jumbo-text-wrap{
+  margin-bottom:100px;
+  @include phone{
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+}
+.jumbotron{
+  margin-top: -45px;
+  padding:0;
+  position:relative;
+  overflow: hidden;
+  @include phone{
+    margin-top: 0px;
   }
 }

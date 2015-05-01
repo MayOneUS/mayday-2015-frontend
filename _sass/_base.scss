@@ -563,6 +563,9 @@ a.btn-targets {
     // padding: 8px 15px;
     font-size: 12px;
   }
+  @include phone{
+    margin-left:10px !important;
+  }
 }
 
  /**
