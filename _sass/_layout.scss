@@ -271,7 +271,10 @@ html {
   min-height: 100%;
 }
 body {
-  margin-bottom: 300px;
+  margin-bottom: 350px;
+  @include tablet-minus{
+    margin-bottom: 420px;
+  }
 }
 
 /**
@@ -286,10 +289,7 @@ body {
   background-color: #0d3960;
   padding-top: 60px;
   color: #ffffff;
-  @include tablet{
-    height: 400px;
-  }
-  @include phone{
+  @include tablet-minus{
     height: 400px;
   }
   a {

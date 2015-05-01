@@ -76,6 +76,13 @@ $share-bg-img: 'share-bg.jpg';
   }
 }
 
+
+@mixin tablet-minus {
+  @media (max-width: #{$small-desktop-min-width - 1px}) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: #{$tablet-min-width}) and (max-width: #{$small-desktop-min-width - 1px}) {
     @content;
@@ -506,12 +513,8 @@ pre {
       width: 100%;
     }
   }
-  &.facebook-small {
+  &.social-small {
     @include button-colors(#FFF);
-    border: solid 2px $color-grey;
-    color: $color-grey;
-    line-height: 0;
-    font-size: 1.8em;
     height: 65px;
     width: 160px;
     @include small-desktop{
@@ -524,20 +527,17 @@ pre {
       width: 49%;
     }
   }
+  &.facebook-small{
+    border: solid 2px $color-facebook;
+  }
+  &.email-small{
+    border: solid 2px $color-grey;
+    color: $color-grey;
+    line-height: 0;
+    font-size: 1.8em;
+  }
   &.twitter-small {
-    @include button-colors(#FFF);
     border: solid 2px $color-twitter;
-    height: 65px;
-    width: 160px;
-    @include small-desktop{
-      width: 130px;
-    }
-    @include tablet{
-      width: 24%;
-    }
-    @include phone{
-      width: 49%;
-    }
   }
 
 }
@@ -563,6 +563,9 @@ a.btn-targets {
     // padding: 8px 15px;
     font-size: 12px;
   }
+  @include phone{
+    margin-left:10px !important;
+  }
 }
 
  /**
@@ -581,6 +584,10 @@ a.btn-targets {
     background-color: lighten( $color-dark-red, 5% );
     border: 2px solid #fff;
   }
+}
+
+.embed-responsive{
+  background: $color-grey-background;
 }
 
 /**
@@ -737,10 +744,18 @@ form.no-gutter fieldset > [class*='col-'] {
 .no-top-margin{
   margin-top:0 !important;
 }
+.no-y-margin{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
 
 .no-bottom-margin{
   margin-bottom:0 !important;
 }
+.no-padding{
+  padding:0 !important;
+}
+
 .bottom-spacer{
   margin-bottom: 80px;
 }

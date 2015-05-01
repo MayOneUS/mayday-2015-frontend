@@ -78,9 +78,6 @@
       background-color:transparent;
       padding-bottom: 0;
 
-      strong{
-        font-size:50px;
-      }
     }
   }
 
@@ -98,6 +95,13 @@
       font-size: 16px;
       margin-bottom:0;
       margin-top:0;
+    }
+
+    &.help-block{
+      margin:0;
+      font-size:12px;
+      text-align: left;
+      margin-left:2px;
     }
   }
 
@@ -120,7 +124,8 @@
 .action-panel form, form.md-inputs {
   margin: 25px 15px 0 15px;
   padding-bottom: 15px;
-  input[type=text], input[type=email], input[type=tel], input[type=number] {
+
+  input[type=text], input[type=email], input[type=tel], input[type=number], textarea {
     font-size: 22px;
     width: 100%;
     border: 2px solid $color-navy-blue;
@@ -131,7 +136,7 @@
   &.smaller-form{
     padding-bottom: 0;
     .form-group{
-      input[type=text], input[type=email], input[type=tel], input[type=number] {
+      input[type=text], input[type=email], input[type=tel], input[type=number], textarea {
         margin-bottom: 4px;
         font-size: 18px;
         font-weight: 300;
@@ -140,7 +145,7 @@
   }
 }
 form.md-inputs{
-  input[type=text], input[type=email], input[type=tel], input[type=number] {
+  input[type=text], input[type=email], input[type=tel], input[type=number], textarea {
     padding:5px 10px;
     height:auto;
   }
@@ -324,17 +329,3 @@ form.md-inputs{
     margin-right:-8px;
   }
 }
-//started fixing the panel on the letter page
-// .lock-in{
-//   position:fixed !important;
-//   display: block !important;
-//   left: 50%;
-//   top: 210px !important;
-//   margin-left: 250px !important;
-// }
-// .lock-in.unlock{
-//   position:absolute !important;
-//   top: 210px !important;
-//   left: 0%;
-//   margin-left: 0px !important;
-// }
