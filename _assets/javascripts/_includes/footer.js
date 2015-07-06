@@ -41,7 +41,7 @@ $(document).ready(function(){
     submitHandler: function(form) {
       ga('send', 'event', 'form', 'submit', 'email_signup');
       $form = $(form);
-      var saveURI = '{{ site.services_url }}/people';
+      var saveURI = services_url + '/people';
       $.post(saveURI, $form.serialize());
       $form.hide();
       $form.next().removeClass('hidden');
